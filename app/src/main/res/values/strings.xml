@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyCloudApp</string>
+    <string name="user">Usuário</string>
+    <string name="pass">Senha</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Cadastrar-se</string>
+    <string name="confirm_pass">Confirme a senha</string>
+    <string name="register">Cadastrar-se</string>
 </resources>
