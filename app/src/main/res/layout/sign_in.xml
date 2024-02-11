@@ -6,21 +6,31 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/edit_text_sign_in_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/user" />
+        android:hint="@string/user"
+        android:autofillHints="@string/user"
+        android:inputType="text" />
 
     <EditText
+        android:id="@+id/edit_text_sign_in_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/pass" />
+        android:hint="@string/pass"
+        android:autofillHints="@string/pass"
+        android:inputType="textPassword" />
 
     <EditText
+        android:id="@+id/edit_text_sign_in_confirm_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/confirm_pass" />
+        android:hint="@string/confirm_pass"
+        android:autofillHints="@string/confirm_pass"
+        android:inputType="textPassword" />
 
     <Button
+        android:id="@+id/btn_sign_in_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/register" />
