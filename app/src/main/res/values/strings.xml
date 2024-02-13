@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyCloudApp</string>
+    <string name="user">User</string>
+    <string name="pass">Pass</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Sign in</string>
+    <string name="confirm_pass">Confirm pass</string>
+    <string name="register">Register</string>
+</resources>
