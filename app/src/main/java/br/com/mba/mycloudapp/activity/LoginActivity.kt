@@ -1,4 +1,4 @@
-package br.com.mba.mycloudapp
+package br.com.mba.mycloudapp.activity
 
 import android.content.Intent
 import android.os.Bundle
