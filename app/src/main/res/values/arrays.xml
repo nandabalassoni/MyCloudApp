@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clothing_types">
+        <item>SHIRT</item>
+        <item>PANTS</item>
+        <item>DRESS</item>
+        <item>SHOES</item>
+        <item>JACKET</item>
+        <item>HAT</item>
+        <item>ACCESSORY</item>
+    </string-array>
+
+    <string-array name="clothing_sizes">
+        <item>XS</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+    </string-array>
+
+</resources>

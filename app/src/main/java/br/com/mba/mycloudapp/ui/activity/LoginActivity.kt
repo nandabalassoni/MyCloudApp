@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:app/src/main/java/br/com/mba/mycloudapp/activity/LoginActivity.kt
 package br.com.mba.mycloudapp.activity
+========
+package br.com.mba.mycloudapp.ui.activity
+>>>>>>>> master:app/src/main/java/br/com/mba/mycloudapp/ui/activity/LoginActivity.kt
 
 import android.content.Intent
 import android.os.Bundle
