@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "86928017587",
+    "project_id": "mycloudapp-94c67",
+    "storage_bucket": "mycloudapp-94c67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86928017587:android:1833e9c602840ce8dbc8c6",
+        "android_client_info": {
+          "package_name": "br.com.mba.mycloudapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe6iXmmZCtUo-uesVS6QfDEZ8_71PzmDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
