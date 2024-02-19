@@ -46,7 +46,7 @@ class ClothingItemFormActivity : AppCompatActivity() {
             viewModel.save(clothingItem).observe(this){
                 it?.let {saved ->
                     if(saved) {
-                        val nextScreen = Intent(this, CrudActivity::class.java)
+                        val nextScreen = Intent(this, ListDataActivity::class.java)
                         startActivity(nextScreen)
                         return@observe
                     }
