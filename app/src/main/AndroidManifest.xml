@@ -18,6 +18,10 @@
             android:exported="true" >
         </activity>
         <activity
+            android:name=".ui.activity.ListDataActivity"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name=".ui.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -28,5 +32,6 @@
         <activity android:name=".ui.activity.SignInActivity" />
         <activity android:name=".ui.activity.CrudActivity" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
