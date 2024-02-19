@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.mba.mycloudapp.databinding.LoginBinding
 import br.com.mba.mycloudapp.model.User
 import com.google.firebase.firestore.FirebaseFirestore
+import org.apache.commons.codec.digest.DigestUtils
+import java.security.spec.KeySpec
+import javax.crypto.SecretKey
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.PBEKeySpec
 
 class LoginActivity: AppCompatActivity() {
 
@@ -30,7 +35,7 @@ class LoginActivity: AppCompatActivity() {
                 Toast.makeText(this, "Informe a senha", Toast.LENGTH_LONG).show()
             } else {
                 val userName = binding.editTextUser.text.toString()
-                val password = binding.editTextPass.text.toString()
+                val password = DigestUtils.sha1Hex(binding.editTextPass.text.toString())
 
                 db.collection("user")
                     .whereEqualTo("userName", userName)

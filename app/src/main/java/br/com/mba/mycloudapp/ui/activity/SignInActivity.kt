@@ -7,7 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.mba.mycloudapp.databinding.SignInBinding
 import br.com.mba.mycloudapp.model.User
 import com.google.firebase.firestore.FirebaseFirestore
+import org.apache.commons.codec.digest.DigestUtils
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.security.spec.KeySpec
+import javax.crypto.SecretKey
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.PBEKeySpec
 
 class SignInActivity: AppCompatActivity() {
 
@@ -42,7 +47,7 @@ class SignInActivity: AppCompatActivity() {
                     val user = User(
                         id = java.util.UUID.randomUUID().toString(),
                         userName = binding.editTextSignInUser.text.toString(),
-                        password = binding.editTextSignInPass.text.toString()
+                        password = DigestUtils.sha1Hex(binding.editTextSignInPass.text.toString())
                     )
 
                     db.collection("user")
