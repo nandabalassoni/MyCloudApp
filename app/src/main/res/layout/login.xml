@@ -11,19 +11,29 @@
         android:padding="@dimen/activity_padding_value" >
 
         <TextView
-            android:id="@+id/textViewTitle"
+            android:id="@+id/text_view_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="@string/title_text_size"
+            android:text="@string/app_name"
+            android:textSize="30sp"
             android:textAlignment="center"
             android:layout_marginTop="@dimen/activity_margin_top"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/text_view_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            app:layout_constraintTop_toBottomOf="@id/text_view_title" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@id/text_view_subtitle"
             android:layout_marginTop="@dimen/linear_margin_top"
             android:orientation="vertical">
 
@@ -33,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:autofillHints="@string/user"
                 android:hint="@string/user"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="@dimen/text_margin_bottom"
                 android:inputType="text" />
 
             <EditText

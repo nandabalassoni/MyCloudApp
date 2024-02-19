@@ -8,12 +8,14 @@
     <string name="confirm_pass">Confirme a senha</string>
     <string name="register">Cadastrar-se</string>
     <string name="new_product">Cadastrar novo produto</string>
+    <string name="new_product_body">Sem produtos cadastrados? Cadastre um agora mesmo clicando no botão abaixo</string>
     <string name="hint_name">Nome</string>
     <string name="hint_color">Cor</string>
     <string name="hint_brand">Marca</string>
     <string name="hint_price">Preço</string>
     <string name="hint_image_url">URL da Imagem</string>
     <string name="button_save">Salvar</string>
+    <string name="button_back">Voltar</string>
     <string name="button_delete">Deletar</string>
 
     <!-- Add a new value -->
