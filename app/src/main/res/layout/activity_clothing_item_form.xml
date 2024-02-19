@@ -7,27 +7,27 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="@dimen/activity_padding_value">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/form_body"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/new_product"
-                android:textSize="30sp"
+                android:textSize="@string/title_text_size"
                 android:textAlignment="center"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="@dimen/activity_margin_top"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="@dimen/linear_margin_top"
                 app:layout_constraintTop_toBottomOf="@id/textViewTitle"
                 android:orientation="vertical">
 
@@ -37,21 +37,21 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_name"
                     android:inputType="text"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <Spinner
                     android:id="@+id/spinnerType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/clothing_types"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <Spinner
                     android:id="@+id/spinnerSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/clothing_sizes"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <EditText
                     android:id="@+id/editTextColor"
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_color"
                     android:inputType="text"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <EditText
                     android:id="@+id/editTextBrand"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_brand"
                     android:inputType="text"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <EditText
                     android:id="@+id/editTextPrice"
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_price"
                     android:inputType="numberDecimal"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <EditText
                     android:id="@+id/editTextImageUrl"
@@ -83,14 +83,14 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_image_url"
                     android:inputType="textUri"
-                    android:minHeight="48dp" />
+                    android:minHeight="@dimen/min_height" />
 
                 <Button
                     android:id="@+id/buttonSave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="@dimen/button_margin_top"
                     android:text="@string/button_save" />
 
             </LinearLayout>

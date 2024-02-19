@@ -14,4 +14,8 @@
     <string name="hint_image_url">Image URL</string>
     <string name="button_save">Save</string>
     <string name="button_delete">Delete</string>
+
+    <!-- Add a new value -->
+
+    <string name="title_text_size">30sp</string>
 </resources>
