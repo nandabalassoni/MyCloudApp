@@ -1,38 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edit_text_sign_in_user"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form_body"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/user"
-        android:autofillHints="@string/user"
-        android:inputType="text" />
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_padding_value">
 
-    <EditText
-        android:id="@+id/edit_text_sign_in_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/pass"
-        android:autofillHints="@string/pass"
-        android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edit_text_sign_in_confirm_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/confirm_pass"
-        android:autofillHints="@string/confirm_pass"
-        android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/text_view_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@id/text_view_title" />
 
-    <Button
-        android:id="@+id/btn_sign_in_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/register" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_view_subtitle"
+            android:layout_marginTop="@dimen/linear_margin_top"
+            android:orientation="vertical">
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/edit_text_sign_in_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_bottom"
+                android:autofillHints="@string/user"
+                android:hint="@string/user"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_text_sign_in_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_bottom"
+                android:autofillHints="@string/pass"
+                android:hint="@string/pass"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/edit_text_sign_in_confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_bottom"
+                android:autofillHints="@string/confirm_pass"
+                android:hint="@string/confirm_pass"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btn_sign_in_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_bottom"
+                android:text="@string/register" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/linear_margin_top"
+                android:text="@string/button_back" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

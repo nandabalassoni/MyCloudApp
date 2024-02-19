@@ -16,23 +16,41 @@ class SignInActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         bindings()
+        backButtuonClickListener()
     }
 
     private fun bindings() {
         binding.btnSignInRegister.setOnClickListener {
-            if(binding.editTextSignInUser.text.toString().isEmpty()) {
-                Toast.makeText(this, "Informe um usuário", Toast.LENGTH_LONG).show()
-            } else if(binding.editTextSignInPass.text.toString().isEmpty()) {
-                Toast.makeText(this, "Informe a senha", Toast.LENGTH_LONG).show()
-            } else if(binding.editTextSignInConfirmPass.text.toString().isEmpty()) {
-                Toast.makeText(this, "Confirme a senha digitando novamente", Toast.LENGTH_LONG).show()
-            } else if(!binding.editTextSignInPass.text.toString().equals(binding.editTextSignInConfirmPass.text.toString())) {
-                Toast.makeText(this, "A senha e a confirmação da senha não são iguais", Toast.LENGTH_LONG).show()
-            } else {
-                val nextScreen = Intent(this, CrudActivity::class.java)
-                startActivity(nextScreen)
-                finish()
+            when {
+                binding.editTextSignInUser.text.toString().isEmpty() -> {
+                    showToast("Informe um usuário")
+                }
+                binding.editTextSignInPass.text.toString().isEmpty() -> {
+                    showToast("Informe a senha")
+                }
+                binding.editTextSignInConfirmPass.text.toString().isEmpty() -> {
+                    showToast("Confirme a senha digitando novamente")
+                }
+                binding.editTextSignInPass.text.toString() != binding.editTextSignInConfirmPass.text.toString() -> {
+                    showToast("A senha e a confirmação da senha não são iguais")
+                }
+                else -> {
+                    val nextScreen = Intent(this, CrudActivity::class.java)
+                    startActivity(nextScreen)
+                    finish()
+                }
             }
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+    }
+
+    private fun backButtuonClickListener() {
+        binding.backButton.setOnClickListener {
+            val nextScreen = Intent(this, LoginActivity::class.java)
+            startActivity(nextScreen)
         }
     }
 }
