@@ -9,6 +9,7 @@
     <string name="register">Cadastrar-se</string>
     <string name="new_product">Cadastrar novo produto</string>
     <string name="new_product_body">Sem produtos cadastrados? Cadastre um agora mesmo clicando no botão abaixo</string>
+    <string name="products_title">Produtos</string>
     <string name="hint_name">Nome</string>
     <string name="hint_color">Cor</string>
     <string name="hint_brand">Marca</string>
