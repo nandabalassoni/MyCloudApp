@@ -2,7 +2,7 @@ package br.com.mba.mycloudapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageButton
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.mba.mycloudapp.databinding.ItemListBinding
@@ -37,6 +37,6 @@ class ListDataAdapter(
         val tvItem: TextView = binding.itemName
         val colorItem: TextView = binding.itemColor
         val itemPrice: TextView = binding.itemPrice
-        val btnDelete: ImageButton = binding.btnDelete
+        val btnDelete: Button = binding.btnDelete
     }
 }
