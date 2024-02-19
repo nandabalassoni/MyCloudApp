@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/new_product"
-                android:textSize="@string/title_text_size"
+                android:textSize="30sp"
                 android:textAlignment="center"
                 android:layout_marginTop="@dimen/activity_margin_top"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -92,6 +92,14 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/button_margin_top"
                     android:text="@string/button_save" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/linear_margin_top"
+                    android:text="@string/button_back" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
