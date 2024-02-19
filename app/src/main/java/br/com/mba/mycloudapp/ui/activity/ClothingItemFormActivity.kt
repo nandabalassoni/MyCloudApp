@@ -68,7 +68,7 @@ class ClothingItemFormActivity : AppCompatActivity() {
 
     private fun backButtuonClickListener() {
         binding.backButton.setOnClickListener {
-            val nextScreen = Intent(this, CrudActivity::class.java)
+            val nextScreen = Intent(this, ListDataActivity::class.java)
             startActivity(nextScreen)
         }
     }
