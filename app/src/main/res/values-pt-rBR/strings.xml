@@ -7,10 +7,12 @@
     <string name="sign_in">Cadastrar-se</string>
     <string name="confirm_pass">Confirme a senha</string>
     <string name="register">Cadastrar-se</string>
+    <string name="new_product">Cadastrar novo produto</string>
     <string name="hint_name">Nome</string>
     <string name="hint_color">Cor</string>
     <string name="hint_brand">Marca</string>
     <string name="hint_price">Preço</string>
     <string name="hint_image_url">URL da Imagem</string>
     <string name="button_save">Salvar</string>
+    <string name="button_delete">Deletar</string>
 </resources>
