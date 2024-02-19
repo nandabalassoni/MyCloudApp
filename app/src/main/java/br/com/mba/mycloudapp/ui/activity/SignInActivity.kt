@@ -5,10 +5,19 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.mba.mycloudapp.databinding.SignInBinding
+import br.com.mba.mycloudapp.model.User
+import com.google.firebase.firestore.FirebaseFirestore
+import org.apache.commons.codec.digest.DigestUtils
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.security.spec.KeySpec
+import javax.crypto.SecretKey
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.PBEKeySpec
 
 class SignInActivity: AppCompatActivity() {
 
     private lateinit var binding: SignInBinding
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +25,7 @@ class SignInActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         bindings()
-        backButtuonClickListener()
+        backButtonClickListener()
     }
 
     private fun bindings() {
@@ -35,9 +44,27 @@ class SignInActivity: AppCompatActivity() {
                     showToast("A senha e a confirmação da senha não são iguais")
                 }
                 else -> {
-                    val nextScreen = Intent(this, CrudActivity::class.java)
-                    startActivity(nextScreen)
-                    finish()
+                    val user = User(
+                        id = java.util.UUID.randomUUID().toString(),
+                        userName = binding.editTextSignInUser.text.toString(),
+                        password = DigestUtils.sha1Hex(binding.editTextSignInPass.text.toString())
+                    )
+
+                    db.collection("user")
+                        .document()
+                        .set(user)
+                        .addOnSuccessListener {
+                            val nextScreen = Intent(this, ListDataActivity::class.java)
+                            startActivity(nextScreen)
+                            finish()
+                        }
+                        .addOnFailureListener { exception ->
+                            Toast.makeText(
+                                this,
+                                "Erro ao tentar cadastrar novo usuário: ${exception.message}",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                 }
             }
         }
@@ -47,10 +74,11 @@ class SignInActivity: AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
-    private fun backButtuonClickListener() {
+    private fun backButtonClickListener() {
         binding.backButton.setOnClickListener {
             val nextScreen = Intent(this, LoginActivity::class.java)
             startActivity(nextScreen)
+            finish()
         }
     }
 }
