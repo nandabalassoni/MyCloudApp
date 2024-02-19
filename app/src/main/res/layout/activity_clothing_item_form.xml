@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/linear_margin_top"
-                    android:text="@string/button_back" />
+                    android:text="@string/home_title" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
