@@ -1,79 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="@dimen/activity_padding_value">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/form_body"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/editTextName"
+            <TextView
+                android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:hint="@string/hint_name"
-                android:inputType="text" />
+                android:text="@string/new_product"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/activity_margin_top"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
-                android:id="@+id/spinnerType"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:entries="@array/clothing_types"/>
+                android:layout_marginTop="@dimen/linear_margin_top"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/spinnerSize"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:entries="@array/clothing_sizes"/>
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_name"
+                    android:inputType="text"
+                    android:minHeight="@dimen/min_height" />
 
-            <EditText
-                android:id="@+id/editTextColor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:hint="@string/hint_color"
-                android:inputType="text" />
+                <Spinner
+                    android:id="@+id/spinnerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/clothing_types"
+                    android:minHeight="@dimen/min_height" />
 
-            <EditText
-                android:id="@+id/editTextBrand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:hint="@string/hint_brand"
-                android:inputType="text" />
+                <Spinner
+                    android:id="@+id/spinnerSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/clothing_sizes"
+                    android:minHeight="@dimen/min_height" />
 
-            <EditText
-                android:id="@+id/editTextPrice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:hint="@string/hint_price"
-                android:inputType="numberDecimal" />
+                <EditText
+                    android:id="@+id/editTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_color"
+                    android:inputType="text"
+                    android:minHeight="@dimen/min_height" />
 
-            <EditText
-                android:id="@+id/editTextImageUrl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_image_url"
-                android:minHeight="48dp"
-                android:inputType="textUri" />
+                <EditText
+                    android:id="@+id/editTextBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_brand"
+                    android:inputType="text"
+                    android:minHeight="@dimen/min_height" />
 
-            <Button
-                android:id="@+id/buttonSave"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/button_save" />
+                <EditText
+                    android:id="@+id/editTextPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_price"
+                    android:inputType="numberDecimal"
+                    android:minHeight="@dimen/min_height" />
 
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/editTextImageUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_image_url"
+                    android:inputType="textUri"
+                    android:minHeight="@dimen/min_height" />
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/button_margin_top"
+                    android:text="@string/button_save" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/linear_margin_top"
+                    android:text="@string/home_title" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

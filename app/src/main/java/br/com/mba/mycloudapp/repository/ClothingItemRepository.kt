@@ -10,7 +10,9 @@ class ClothingItemRepository (
     private val firestore: FirebaseFirestore
 ){
     fun save(clothingItem: ClothingItem): LiveData<Boolean> = MutableLiveData<Boolean>().apply {
+        val document = firestore.collection(FIRESTORE_CLOTHING_ITEMS_COLLECTION).document()
         val clothingItem = ClothingItem(
+            id = document.id,
             name = clothingItem.name,
             type = clothingItem.type,
             size = clothingItem.size,
@@ -19,9 +21,6 @@ class ClothingItemRepository (
             price = clothingItem.price,
             imageUrl = clothingItem.imageUrl
         )
-
-        val document = firestore.collection(FIRESTORE_CLOTHING_ITEMS_COLLECTION)
-            .document()
 
         document.set(clothingItem)
 

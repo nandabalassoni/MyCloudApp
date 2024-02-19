@@ -6,10 +6,20 @@
     <string name="sign_in">Sign in</string>
     <string name="confirm_pass">Confirm pass</string>
     <string name="register">Register</string>
+    <string name="new_product">Register new product</string>
+    <string name="new_product_body">No products? Register one now by clicking the button below</string>
+    <string name="products_title">Products</string>
+    <string name="home_title">Home</string>
     <string name="hint_name">Name</string>
     <string name="hint_color">Color</string>
     <string name="hint_brand">Brand</string>
     <string name="hint_price">Price</string>
     <string name="hint_image_url">Image URL</string>
     <string name="button_save">Save</string>
+    <string name="button_back">Back</string>
+    <string name="button_delete">Delete</string>
+
+    <!-- Add a new value -->
+
+    <string name="title_text_size">30sp</string>
 </resources>
