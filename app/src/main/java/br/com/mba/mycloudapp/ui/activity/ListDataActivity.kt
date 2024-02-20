@@ -11,8 +11,10 @@ import br.com.mba.mycloudapp.model.ClothingItem
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ListDataActivity : AppCompatActivity() {
-    private lateinit var binding: ListDataActivityBinding
+
     private val db = FirebaseFirestore.getInstance()
+
+    private lateinit var binding: ListDataActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,7 @@ class ListDataActivity : AppCompatActivity() {
 
         openListDataAdapter()
         openFormActivity()
+        openEditActivity()
     }
 
     fun openListDataAdapter() {
@@ -49,6 +52,13 @@ class ListDataActivity : AppCompatActivity() {
     fun openFormActivity() {
         binding.crudFab.setOnClickListener{
             val nextScreen = Intent(this, ClothingItemFormActivity::class.java)
+            startActivity(nextScreen)
+        }
+    }
+
+    fun openEditActivity() {
+        binding.recyclerView.setOnClickListener{
+            val nextScreen = Intent(this, EditDataActivity::class.java)
             startActivity(nextScreen)
         }
     }
