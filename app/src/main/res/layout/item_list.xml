@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="@dimen/text_margin_top"
-                android:text="@string/button_delete" />
+                android:text="@string/button_update" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
