@@ -19,6 +19,7 @@
     <string name="button_save">Salvar</string>
     <string name="button_back">Voltar</string>
     <string name="button_delete">Deletar</string>
+    <string name="button_update">Editar</string>
 
     <!-- Add a new value -->
 
