@@ -18,6 +18,7 @@
     <string name="button_save">Save</string>
     <string name="button_back">Back</string>
     <string name="button_delete">Delete</string>
+    <string name="button_update">Update</string>
 
     <!-- Add a new value -->
 
