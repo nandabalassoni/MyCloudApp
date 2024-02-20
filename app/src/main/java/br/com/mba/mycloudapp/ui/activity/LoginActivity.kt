@@ -2,17 +2,11 @@ package br.com.mba.mycloudapp.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.mba.mycloudapp.databinding.LoginBinding
-import br.com.mba.mycloudapp.model.User
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.digest.DigestUtils
 import com.google.firebase.firestore.FirebaseFirestore
-import org.apache.commons.codec.digest.DigestUtils
-import java.security.spec.KeySpec
-import javax.crypto.SecretKey
-import javax.crypto.SecretKeyFactory
-import javax.crypto.spec.PBEKeySpec
 
 class LoginActivity: AppCompatActivity() {
 

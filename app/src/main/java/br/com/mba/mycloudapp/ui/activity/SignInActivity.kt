@@ -6,13 +6,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.mba.mycloudapp.databinding.SignInBinding
 import br.com.mba.mycloudapp.model.User
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.digest.DigestUtils
 import com.google.firebase.firestore.FirebaseFirestore
-import org.apache.commons.codec.digest.DigestUtils
-import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.security.spec.KeySpec
-import javax.crypto.SecretKey
-import javax.crypto.SecretKeyFactory
-import javax.crypto.spec.PBEKeySpec
 
 class SignInActivity: AppCompatActivity() {
 
