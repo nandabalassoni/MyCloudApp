@@ -21,6 +21,11 @@
             android:name=".ui.activity.ListDataActivity"
             android:exported="true" >
         </activity>
+
+        <activity
+            android:name=".ui.activity.EditDataActivity"
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".ui.activity.LoginActivity"
             android:exported="true">
