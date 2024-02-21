@@ -11,6 +11,8 @@ import br.com.mba.mycloudapp.databinding.ItemListBinding
 import br.com.mba.mycloudapp.model.ClothingItem
 import br.com.mba.mycloudapp.ui.activity.EditDataActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.NumberFormat
+import java.util.Locale
 
 class ListDataAdapter(
     private var itemList: MutableList<ClothingItem>
@@ -30,7 +32,7 @@ class ListDataAdapter(
         val item = itemList[position]
         holder.tvItem.text = item.name
         holder.colorItem.text = item.color
-        holder.itemPrice.text = item.price.toString()
+
 
         holder.btnDelete.setOnClickListener {
             val itemToRemove = itemList[position]
@@ -52,6 +54,13 @@ class ListDataAdapter(
             nextScreen.putExtra("itemId", item.id)
             holder.itemView.context.startActivity(nextScreen)
         }
+
+        var price = item.price
+        val format = NumberFormat.getCurrencyInstance(Locale("pt","BR"))
+        val formattedPrice = format.format(price)
+
+        holder.itemPrice.text = formattedPrice
+
     }
 
     override fun getItemCount() = itemList.size

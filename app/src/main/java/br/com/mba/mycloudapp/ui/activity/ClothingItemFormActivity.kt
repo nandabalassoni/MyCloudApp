@@ -7,7 +7,6 @@ import android.widget.Toast
 import br.com.mba.mycloudapp.databinding.ActivityClothingItemFormBinding
 import br.com.mba.mycloudapp.model.ClothingItem
 import br.com.mba.mycloudapp.ui.viewModel.ClothingItemFormViewModel
-import com.google.firebase.FirebaseApp
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.lang.NumberFormatException
 
@@ -19,13 +18,12 @@ class ClothingItemFormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClothingItemFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        saveButtonClickListener()
+        backButtonClickListener()
 
-        saveButtuonClickListener()
-        backButtuonClickListener()
 
     }
-
-    private fun saveButtuonClickListener() {
+    private fun saveButtonClickListener() {
 
         //primeiro faz a validacao caso o nome esteja vazio
         binding.buttonSave.setOnClickListener{
@@ -66,7 +64,9 @@ class ClothingItemFormActivity : AppCompatActivity() {
         }
     }
 
-    private fun backButtuonClickListener() {
+
+
+    private fun backButtonClickListener() {
         binding.backButton.setOnClickListener {
             val nextScreen = Intent(this, ListDataActivity::class.java)
             startActivity(nextScreen)
